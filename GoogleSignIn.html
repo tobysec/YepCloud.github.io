@@ -1,0 +1,29 @@
+<html>
+  <head>
+  <title>Yep Cloud</title>
+  </head>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="www.yepcloud.co.uk/Static/Images/favicon.ico">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="SignIn.js"></script>
+</head>
+
+  <body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="543710304544-1tdkqad8nkr65vcjh69m4ij29rd2n1er.apps.googleusercontent.com">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+  </body>
+  
+</html>
